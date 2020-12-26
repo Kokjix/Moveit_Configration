@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+
+<!-- launch empty world -->
+<include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="true"/>
+</include>
+
+
+<!-- send urdf to the parameter server -->
+<param name="robot_description" command="$(find xacro)/xacro.py '$(find deneme16)/urdf/deneme16.urdf'"/>
+
+
+<!-- spawn robotic arm -->
+<node
+    name="spawn_model"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-file $(find deneme16)/urdf/deneme16.urdf -urdf -model deneme16"
+    output="screen" />
+
+<!-- took from ur5 repo, don't know if it's necessary. must be tried -->
+ 
+
+ <!-- <node name="ros_control_controller_manager" pkg="controller_manager" type="controller_manager" respawn="false" output="screen" args="load joint_group_position_controller" /> -->
+
+
+<!-- other controllers will be launched outside this file -->
+
+
+<!-- I don't know if it's a necessary -->
+<!-- <node
+    name="tf_footprint_base"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0 0 0 0 base_link base_footprint 40" /> -->
+  
+
+
+
+</launch>

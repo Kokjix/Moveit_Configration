@@ -1,0 +1,8 @@
+prefix=/home/baran/robotic_arm20_ws/install
+
+Name: deneme16
+Description: Description of deneme16
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

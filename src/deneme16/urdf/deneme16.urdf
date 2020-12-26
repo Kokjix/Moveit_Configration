@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="deneme16">
+
+  <link name="world"> </link>
+  <joint name="dummy_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0542341068703452 0.0675948685686234 0.0313556778042014"
+        rpy="0 0 0" />
+      <mass
+        value="0.740526244302131" />
+      <inertia
+        ixx="0.00207135317797409"
+        ixy="0.000441549375992959"
+        ixz="3.04066808160143E-05"
+        iyy="0.000922136149425879"
+        iyz="-0.000121847666080401"
+        izz="0.00262750332404895" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://deneme16/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://deneme16/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="0.0563922003354066 0.0295380738737359 0.0117055663612383"
+        rpy="0 0 0" />
+      <mass
+        value="0.70671764820646" />
+      <inertia
+        ixx="0.00194089525200429"
+        ixy="0.000430757616896897"
+        ixz="0.000126720562963551"
+        iyy="0.000980020835821606"
+        iyz="-0.000477646338854546"
+        izz="0.00234570033722001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://deneme16/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://deneme16/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="-0.022 0.039 0.053371"
+      rpy="1.731 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="200"
+      velocity="20" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="0.0605724796544812 0.268894582951781 0.0478990958098943"
+        rpy="0 0 0" />
+      <mass
+        value="0.857612894315898" />
+      <inertia
+        ixx="0.00209575920536199"
+        ixy="-0.000577783198589211"
+        ixz="3.25501897094838E-05"
+        iyy="0.00115615406946479"
+        iyz="-1.43201857904065E-05"
+        izz="0.00281128486223931" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://deneme16/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://deneme16/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0.09063 -0.0069794 0.029226"
+      rpy="0 0.29102 -1.5708" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="200"
+      velocity="20" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="-0.225456306268306 -0.050103264114186 0.0445637536606487"
+        rpy="0 0 0" />
+      <mass
+        value="0.500739434351218" />
+      <inertia
+        ixx="0.00041351591711629"
+        ixy="-0.000338986154992068"
+        ixz="-6.16909127959655E-05"
+        iyy="0.00175634762440097"
+        iyz="2.92810915397088E-07"
+        izz="0.00180906267182259" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://deneme16/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://deneme16/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="0.10509 0.33657 0.016"
+      rpy="-3.1416 0 -3.1416" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="200"
+      velocity="20" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="0.0704225882332688 0.010484936981156 -0.0805417867010427"
+        rpy="0 0 0" />
+      <mass
+        value="0.389981709207388" />
+      <inertia
+        ixx="0.000561432406983857"
+        ixy="0.000513321561672825"
+        ixz="-6.71245703518869E-05"
+        iyy="0.000946524274894303"
+        iyz="3.22218707708812E-05"
+        izz="0.00124715163770403" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://deneme16/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://deneme16/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="-0.36016 -0.077968 0.019"
+      rpy="-1.5708 0.63497 0.21475" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="200"
+      velocity="20" />
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="0.0352891618565995 0.0586871859326141 0.096416325485137"
+        rpy="0 0 0" />
+      <mass
+        value="0.39018069934749" />
+      <inertia
+        ixx="0.0012335058739028"
+        ixy="0.00023899163897432"
+        ixz="-2.18789256159232E-06"
+        iyy="0.000257485020801852"
+        iyz="-8.06535585525359E-05"
+        izz="0.00123676291099623" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://deneme16/meshes/link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://deneme16/meshes/link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_5"
+    type="revolute">
+    <origin
+      xyz="0.044269 0.058673 -0.11558"
+      rpy="1.5708 -0.21474 2.4952" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="200"
+      velocity="20" />
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="-3.98654231892337E-06 9.67696532803708E-05 0.0645918334757605"
+        rpy="0 0 0" />
+      <mass
+        value="0.178725424646369" />
+      <inertia
+        ixx="0.00028907679157409"
+        ixy="-2.5171384782253E-06"
+        ixz="3.31613474427344E-08"
+        iyy="0.000350074319672543"
+        iyz="-8.04961251532614E-07"
+        izz="0.000110299037169579" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://deneme16/meshes/link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://deneme16/meshes/link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_6"
+    type="revolute">
+    <origin
+      xyz="0.072015 0.014701 0.087"
+      rpy="1.5708 1.5683 1.7722" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="200"
+      velocity="20" />
+  </joint>
+  <link
+    name="gripper_right_link">
+    <inertial>
+      <origin
+        xyz="0.0198374183882344 0.0793385223120242 0.000833464124512212"
+        rpy="0 0 0" />
+      <mass
+        value="0.105002755868146" />
+      <inertia
+        ixx="0.000215304943523066"
+        ixy="5.51595405523573E-06"
+        ixz="-2.46891497464945E-07"
+        iyy="1.44146058304726E-05"
+        iyz="-1.38737099116705E-06"
+        izz="0.000218676111081576" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://deneme16/meshes/gripper_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://deneme16/meshes/gripper_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_right_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.118"
+      rpy="1.5708 0.0087917 -3.1004" />
+    <parent
+      link="link_6" />
+    <child
+      link="gripper_right_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.45"
+      upper="0.0"
+      effort="200"
+      velocity="20" />
+  </joint>
+  <link
+    name="gripper_left_link">
+    <inertial>
+      <origin
+        xyz="0.0198374183882342 0.0793385223120242 -0.00116653587548787"
+        rpy="0 0 0" />
+      <mass
+        value="0.105002755868146" />
+      <inertia
+        ixx="0.000215304943523066"
+        ixy="5.51595405523623E-06"
+        ixz="-2.46891497464946E-07"
+        iyy="1.44146058304726E-05"
+        iyz="-1.38737099116669E-06"
+        izz="0.000218676111081575" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://deneme16/meshes/gripper_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://deneme16/meshes/gripper_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_left_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.118"
+      rpy="1.5708 -0.0087917 0.041173" />
+    <parent
+      link="link_6" />
+    <child
+      link="gripper_left_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.45"
+      upper="0.0"
+      effort="200"
+      velocity="20" />
+  </joint>
+  <!-- gazebo plugin -->
+
+<gazebo>
+ <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+  <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+  <legacyModeNS>true</legacyModeNS> 
+  <controlPeriod>0.001</controlPeriod>
+  <robotNamespace></robotNamespace>
+    </plugin>
+  </gazebo>
+
+<transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name="tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_2">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor2">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name="tran3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_3">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor3">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name="tran4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_4">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor4">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name="tran5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_5">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor5">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name="tran6">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_6">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor6">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name="tran_gripper_right">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="gripper_right_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_gripper_right">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name="tran_gripper_left">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="gripper_left_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_gripper_left">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+</robot>
